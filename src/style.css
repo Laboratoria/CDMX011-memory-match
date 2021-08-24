@@ -1,0 +1,49 @@
+.carta{
+    width: 60px;
+    height: 90px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 5px #525352;
+    border-radius: 3px;
+
+}
+.encabezado{
+    background-color: blue;
+    color: brown;
+}
+.maincontainer{
+    position: relative;
+    width: 250px;
+    height: 320px;
+    background-image: url("cartaRevesPoke.png");
+    background-repeat: no-repeat;
+  }
+  .theCard{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+  }
+  .theCard:hover{
+    transform: rotateY(180deg);
+  }
+  .theFront{
+    position:  absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #ffc728;
+    color: #333;
+    
+  }
+  .theBack{
+    position:  absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background:#fff150;
+    color:#444;
+    
+  }
