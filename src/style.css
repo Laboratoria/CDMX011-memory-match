@@ -1,0 +1,62 @@
+.App{
+    position: absolute;
+    width: 490px;
+    height: 80px;
+    top: 0px;
+    bottom: 30px;
+    font-family: Sanchez;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 82px;
+    text-align: center;
+    color: #1A253B;
+}
+:root{
+    background-color: rgb(255, 255, 255); 
+    
+}
+.cardContent{
+     display:flex;
+    background-color: rgb(231, 221, 221);
+    width: 120px;
+    height: 250px ;
+    margin: 18px 6px;
+    padding: 11px 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.text{
+    
+    font-family: Sanchez;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 82px;
+    
+    color: #1A253B;
+
+}
+.picture{
+  
+    background-color: rgb(71, 115, 165);
+    padding: 15;
+    width: 100px;
+    height: 140px;
+    margin: 20px;
+    justify-content: center;
+
+}
+.content{
+    
+    display:flex;
+    background-color: rgb(110, 110, 110);
+    padding: 35;
+    top: 150px;
+    bottom: 30px;
+    width: 1350px;
+    height:1100 ;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}

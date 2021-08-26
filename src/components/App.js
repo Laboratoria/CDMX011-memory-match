@@ -1,26 +1,59 @@
-//
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
-// JavasSript que contenga el `export` correspondiente...
-//
-// import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
-// fetch('./data/pokemon/pokemon.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//
 
-const App = () => {
+import travel from '../data/travel/travel.js';
+//console.log(pokemon);
+
+const cards = travel.items.concat(travel.items)
+console.log(cards);
+
+export const App = () => {
   const el = document.createElement('div');
-
   el.className = 'App';
-  el.textContent = 'Hola mundo!';
-
+  el.textContent = 'Travel Memory';
+  el.appendChild(CardContainer())
   return el;
-};
+ };
 
-export default App;
+ export const Card = (card) => {
+      const cardEl = document.createElement('div')
+      cardEl.className = 'cardContent'
+      const titleEl = document.createElement('p')
+      titleEl.textContent = card.id
+      titleEl.className = 'text'
+      const img = document.createElement('img');
+      img.className = 'picture'
+      img.src = card.image
+      cardEl.appendChild(img)
+      cardEl.appendChild(titleEl)
+
+      return cardEl
+ }
+
+ export const CardContainer = () => {
+  const container = document.createElement('div')
+  container.className = 'content'
+  cards.forEach(function(card) {
+    container.appendChild(Card(card))
+   
+  });
+
+  return container
+}
+
+
+/*function shuffle (cards) {
+  const mix = cards;
+  mix.Math.random() * 5;
+  }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
