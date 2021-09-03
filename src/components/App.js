@@ -7,6 +7,7 @@ const pokemonDatos = DoubleData(pokemon.items)
 
 export const App = () => {
   const divContenedor = document.createElement('div');
+  divContenedor.className = "contenedor";
   const dataRandom = Shuffle(pokemonDatos);
   dataRandom.forEach(function(tarjeta){
     divContenedor.appendChild(Carta(tarjeta));

@@ -4,7 +4,7 @@ export const ButtonReset = () => {
       boton.classList.add('button-reset')
       boton.addEventListener("click", (e)=>{
           e.preventDefault();
-          location.reload(); // e
+          location.reload(); 
       });
       return boton;
 }

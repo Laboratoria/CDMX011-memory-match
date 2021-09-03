@@ -1,12 +1,20 @@
+/*contenido de todo 
+conten 
+display: flex;
+flex-wrap: wrap;
+contenido de la tarjeta*/
+
 .carta{
-    width: 200px;
-    height: 300px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    box-shadow: 5px 5px 5px #525352;
-    border-radius: 3px;
-    display: inline-block;
+  width: 200px;
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: 5px 5px 5px #525352;
+  border-radius: 3px;
+  display: inline-flex ;
+  display: flex;
+  flex-wrap: wrap;
 
 }
 .carta {
@@ -21,6 +29,7 @@
   position: absolute;
   backface-visibility: hidden;
   background-color: white;
+  
 }
 .cara img{
   margin: 100px auto;
@@ -31,6 +40,18 @@
 }
 .carta:hover{
   transform: rotateY(180deg);
+}
+.root{
+  position: relative;
+  background-image: url("cartaRevesPoke.png");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contenedor{
+  display: flex;
+  flex-wrap: wrap;
+  display: inline-flex;
 }
 /*
 .encabezado{
