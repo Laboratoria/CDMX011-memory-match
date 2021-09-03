@@ -1,13 +1,38 @@
 .carta{
-    width: 60px;
-    height: 90px;
+    width: 200px;
+    height: 300px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     box-shadow: 5px 5px 5px #525352;
     border-radius: 3px;
+    display: inline-block;
 
 }
+.carta {
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+  margin: 15px;
+}
+
+.cara {
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  backface-visibility: hidden;
+  background-color: white;
+}
+.cara img{
+  margin: 100px auto;
+}
+
+.cara.detras {
+  transform: rotateY(180deg);
+}
+.carta:hover{
+  transform: rotateY(180deg);
+}
+/*
 .encabezado{
     background-color: blue;
     color: brown;
@@ -46,4 +71,4 @@
     background:#fff150;
     color:#444;
     
-  }
+  }*/

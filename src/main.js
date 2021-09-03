@@ -1,14 +1,6 @@
-import App from './components/App.js';
+import { App } from "./components/App.js";
+import { ButtonReset } from "./components/ButtonReset.js";
+const root = document.getElementById("root");
 
-/*document.getElementById('root').appendChild(App());
-
-function juegoDeCartas{
-    
-}*/
-function iniciarJuego(){
-    
-    alert("El juego va a iniciar");
-}
-let boton;
-boton = document.getElementById("iniciarJuego");
-boton.addEventListener("click", iniciarJuego);
+root.appendChild(ButtonReset());
+root.appendChild(App());
