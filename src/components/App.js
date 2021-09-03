@@ -2,53 +2,43 @@
 // Para incluir los diferentes sets de cartas podemos _importar_ el archivo
 // JavasSript que contenga el `export` correspondiente...
 //
-import pokemon from '../data/pokemon/pokemon.js';
-// eslint-disable-next-line no-console
-//console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
-// fetch('./data/pokemon/pokemon.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//
+import pokemon from "../data/pokemon/pokemon.js";
+import { suffle, cardContainer, button, duplicateData } from "../utils.js";
 
-// eslint-disable-next-line no-console
-const pokemonData = pokemon.items
+const pokemonData = pokemon.items;
+const arrayDuplicate = duplicateData(pokemonData)
 
-//Duplicar data
-const duplicate = pokemonData.concat(pokemonData)
+
 export const App = () => {
-  const container = document.createElement('div')
-  container.id ="container"
+  const container = document.createElement("div");
+  container.id = "container";
+  container.appendChild(button())
+  const revolverData = suffle(arrayDuplicate)
+  container.appendChild(cardContainer(revolverData)) 
 
-  duplicate.forEach(item =>{
-  const card = document.createElement("div")
-  card.setAttribute("id","cards")
-
-  const imagen= document.createElement("img")
-   imagen.src= item.image
-   card.appendChild(imagen)
-
-   const name = document.createElement("h3")
-   name.textContent =item.id
-   card.appendChild(name)
-
-   container.appendChild(card)
+  //mostrarTarjetas(revolverData).forEach(card=>container.appendChild(card))
  
-})
-
-// eslint-disable-next-line no-undef
-return container
-}
+  return container
+  };
 
 
- 
-//Aqui pa bajo si funciona
 
-/* const pokemonData = pokemon.items
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+//Lamar la data
+// const pokemonData = pokemon.items
 export const App = () => {
   let container= document.createElement('div');
   //container.id ="container"
@@ -77,13 +67,13 @@ const carta= (card) => {
 };
 
 //Separar cada imagen 
-const cardContainer = () => {
+export const cardContainer = () => {
   const container = document.createElement("div")
-  pokemonData.forEach(function(card){
+  duplicateData.forEach(function(card){
     container.appendChild(carta(card))
   });
   return container
 
 }
+ 
  */
-  
