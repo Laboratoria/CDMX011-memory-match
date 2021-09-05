@@ -10,7 +10,16 @@ export const App = () => {
   divContenedor.className = "contenedor";
   const dataRandom = Shuffle(pokemonDatos);
   dataRandom.forEach(function(tarjeta){
-    divContenedor.appendChild(Carta(tarjeta));
+    let carta= Carta(tarjeta);
+    divContenedor.appendChild(carta);
+    carta.addEventListener("click", (e) => {
+        
+        let elementos = carta.childNodes;
+        elementos[1].style.transition='all 0.5s';
+        elementos[1].style.opacity = 0;
+     
+    });
   });
   return divContenedor;
 };
+
