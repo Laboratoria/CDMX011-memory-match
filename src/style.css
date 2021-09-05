@@ -6,14 +6,13 @@
     background-repeat: no-repeat;
     box-shadow: 5px 5px 5px #525352;
     border-radius: 3px;
-
+}
 .cara {
   height: inherit;
   width: inherit;
   position: absolute;
   backface-visibility: hidden;
   background-color: white;
-  
 }
 .cara img{
   margin: 100px auto;
@@ -38,9 +37,9 @@
   display: inline-flex;
 }
 
-.encabezado{
-    background-color: blue;
-    color: brown;
+#encabezado{
+   background-image: url("imgEncabezado.jpg");
+
 }
 .maincontainer{
     position: relative;
@@ -76,4 +75,8 @@
     background:#fff150;
     color:#444;
     
+  }
+  h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:
   }
