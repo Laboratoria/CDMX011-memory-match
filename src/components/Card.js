@@ -1,4 +1,4 @@
-export const Carta = (nombre) => {
+export const Carta = (pokemon) => {
     const cartaPokemon = document.createElement('div');
     const imgPokemon = document.createElement('img');
     const cartaFrente = document.createElement('div');
@@ -6,14 +6,18 @@ export const Carta = (nombre) => {
     const cartaAtras = document.createElement('div');
     const imagenAtras = document.createElement('img');
     imagenAtras.src = "cartaRevesPoke.png";
-    imgPokemon.src = nombre.image;
+    imgPokemon.src = pokemon.image;
     cartaPokemon.className = "carta";
     cartaFrente.className = "cara";
     cartaAtras.className = "detras";
    
-   cartaFrente.appendChild(imgPokemon)
-   cartaAtras.appendChild(imagenAtras)
-   cartaPokemon.appendChild(cartaFrente)
-   cartaPokemon.appendChild(cartaAtras)
+   cartaFrente.appendChild(imgPokemon);
+   cartaAtras.appendChild(imagenAtras);
+   cartaPokemon.appendChild(cartaFrente);
+   cartaPokemon.appendChild(cartaAtras);
+
+   
    return cartaPokemon
   }
+
+

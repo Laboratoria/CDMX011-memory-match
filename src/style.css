@@ -1,11 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&effect=shadow-multiple&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Luckiest+Guy&display=swap');
+*{
+  padding: 0%;
+  margin: 0%;
+}
+#encabezado{
+  background-image: url("imgEncabezado.jpg");
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.contenedor{
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .carta{
-    width: 60px;
-    height: 90px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    box-shadow: 5px 5px 5px #525352;
-    border-radius: 3px;
+  display: block;
+  width: 100px;
+  height: 150px;
+  background-color: white;
+  box-shadow: 5px 5px 5px #525352;
+  border-radius: 3px;
 }
 .cara {
   height: inherit;
@@ -14,69 +38,70 @@
   backface-visibility: hidden;
   background-color: white;
 }
+.detras{
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
 .cara img{
-  margin: 100px auto;
+  
+  width: inherit;
 }
 
-.cara.detras {
+.detras img{
+  width:inherit;
+  height: inherit;
+}
+
+.detras {
   transform: rotateY(180deg);
 }
 .carta:hover{
   transform: rotateY(180deg);
 }
-.root{
-  position: relative;
-  background-image: url("cartaRevesPoke.png");
-  background-repeat: no-repeat;
-  display: flex;
-  flex-wrap: wrap;
-}
-.contenedor{
-  display: flex;
-  flex-wrap: wrap;
-  display: inline-flex;
-}
 
-#encabezado{
-   background-image: url("imgEncabezado.jpg");
 
-}
-.maincontainer{
-    position: relative;
-    width: 250px;
-    height: 320px;
-    background-image: url("cartaRevesPoke.png");
-    background-repeat: no-repeat;
+h1{
+  color: #ff8811;
+  text-align: left;
+  font-family: 'Indie Flower', cursive;
+  font-size: 90px;
+  text-shadow: 4px 4px 4px black;
+   
+} 
+  /* `sm` applies to x-small devices (portrait phones, less than 576px)*/
+  @media (max-width: 575.98px) { 
+    h1{
+      font-size:15px;
+
+    }
+    /*p{
+      font-family: Arial, Helvetica, sans-serif;
+      color:pink;
+
+    }*/
+   }
+  
+  /* `md` applies to small devices (landscape phones, less than 768px)*/
+  @media (max-width: 767.98px) { 
+    h1{
+      font-size:25px;
+    }
+   }
+  
+  /* `lg` applies to medium devices (tablets, less than 992px)*/
+  @media (max-width: 991.98px) { 
+    h1{
+      font-size:50px;
+    }
+   }
+  
+  /*`xl` applies to large devices (desktops, less than 1200px)*/
+  @media (max-width: 1199.98px) { 
+
   }
-  .theCard{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: all 0.5s ease;
-  }
-  .theCard:hover{
-    transform: rotateY(180deg);
-  }
-  .theFront{
-    position:  absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background: #ffc728;
-    color: #333;
-    
-  }
-  .theBack{
-    position:  absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background:#fff150;
-    color:#444;
-    
-  }
-  h1{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:
+  
+  /* `xxl` applies to x-large devices (large desktops, less than 1400px)*/
+  @media (max-width: 1399.98px) { 
+
   }
