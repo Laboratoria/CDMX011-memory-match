@@ -1,27 +1,11 @@
-/*contenido de todo 
-conten 
-display: flex;
-flex-wrap: wrap;
-contenido de la tarjeta*/
-
 .carta{
-  width: 200px;
-  height: 300px;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  box-shadow: 5px 5px 5px #525352;
-  border-radius: 3px;
-  display: inline-flex ;
-  display: flex;
-  flex-wrap: wrap;
-
-}
-.carta {
-  transform-style: preserve-3d;
-  transition: all 0.5s linear;
-  margin: 15px;
-}
+    width: 60px;
+    height: 90px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 5px #525352;
+    border-radius: 3px;
 
 .cara {
   height: inherit;
@@ -53,7 +37,7 @@ contenido de la tarjeta*/
   flex-wrap: wrap;
   display: inline-flex;
 }
-/*
+
 .encabezado{
     background-color: blue;
     color: brown;
@@ -92,4 +76,4 @@ contenido de la tarjeta*/
     background:#fff150;
     color:#444;
     
-  }*/
+  }
