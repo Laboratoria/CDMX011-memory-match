@@ -22,14 +22,16 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-color:purple;
 }
 .carta{
   display: block;
-  width: 100px;
-  height: 150px;
+  width:150px;
+  height: 200px;
   background-color: white;
   box-shadow: 5px 5px 5px #525352;
   border-radius: 3px;
+  margin: 20px;
 }
 .cara {
   height: inherit;
@@ -37,14 +39,15 @@
   position: absolute;
   backface-visibility: hidden;
   background-color: white;
+  
 }
 .detras{
   position: absolute;
   width: inherit;
   height: inherit;
+  
 }
 .cara img{
-  
   width: inherit;
 }
 
@@ -59,17 +62,14 @@
 .carta:hover{
   transform: rotateY(180deg);
 }
-
-
 h1{
   color: #ff8811;
   text-align: left;
   font-family: 'Indie Flower', cursive;
   font-size: 90px;
   text-shadow: 4px 4px 4px black;
-   
 } 
-  /* `sm` applies to x-small devices (portrait phones, less than 576px)*/
+
   @media (max-width: 575.98px) { 
     h1{
       font-size:15px;
@@ -78,30 +78,66 @@ h1{
     /*p{
       font-family: Arial, Helvetica, sans-serif;
       color:pink;
-
-    }*/
+   }*/
    }
   
-  /* `md` applies to small devices (landscape phones, less than 768px)*/
+  
   @media (max-width: 767.98px) { 
     h1{
       font-size:25px;
+
     }
-   }
+    #parrafo2{
+      color: purple;
+    }
+  }  
   
-  /* `lg` applies to medium devices (tablets, less than 992px)*/
+  
+  
   @media (max-width: 991.98px) { 
     h1{
       font-size:50px;
     }
+    
    }
   
-  /*`xl` applies to large devices (desktops, less than 1200px)*/
+  
   @media (max-width: 1199.98px) { 
 
   }
   
-  /* `xxl` applies to x-large devices (large desktops, less than 1400px)*/
+  
   @media (max-width: 1399.98px) { 
 
   }
+
+  .button-reset{
+    /*background-color:red; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;*/
+    background-color: #ff8811;
+    border-radius: 50px;
+    color:white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+}
+.button-reset:hover {
+  background-color:rgb(141, 192, 250);
+  color: white;
+}
+  

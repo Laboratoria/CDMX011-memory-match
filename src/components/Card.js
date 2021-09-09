@@ -16,8 +16,8 @@ export const Carta = (pokemon) => {
    cartaPokemon.appendChild(cartaFrente);
    cartaPokemon.appendChild(cartaAtras);
 
-   
    return cartaPokemon
+   
   }
 
 
