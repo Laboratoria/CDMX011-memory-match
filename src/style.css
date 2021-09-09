@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&effect=shadow-multiple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Luckiest+Guy&display=swap');
+
+
+
 main{
   background-image: url(https://i.imgur.com/C90jsi5.png);
   background-repeat: no-repeat; 
@@ -14,7 +19,13 @@ header{
   background-color: rgba(0, 0, 255, 0.582);
   
 }
-
+header h1{
+  color: #fdec00f5;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px rgb(1, 86, 155);
+}
 
 /*header{
 	position:sticky;
@@ -29,16 +40,16 @@ header{
   */
 	
 
-  .imgcard img{
+  .divImgCard img{
     filter: drop-shadow(0 2px 5px rgb(121, 99, 99));  
     padding: 7px 7px;
   }
   
-  .imgcard:hover img{
+  .divImgCard:hover img{
     transform: rotate(10deg); /*genera rataciòn al pasar el puntero */
   }
 
-.imgcard{	
+.divImgCard{	
     
     margin: 15px 15px;/*margen de la tarjeta*/
     width: 190px;/*ancho de carta*/
@@ -53,7 +64,7 @@ header{
     
   }
   
-.containerCards{
+.divContainerCards{
   display: flex;
   flex-direction: row; /*  establece la direcciòn como el modo de escritura */
   flex-wrap: wrap; /* en varias lineas (multilinea) */

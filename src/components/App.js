@@ -10,20 +10,35 @@ import pokemon from '../data/pokemon/pokemon.js';
  //console.log(dataPokemon);
 
 export const App = () => {
-  const cartaPokemon = document.createElement ('div');
-  cartaPokemon.id = 'cardsId';
-  cartaPokemon.className= "containerCards";
+  const divDadPokemon = document.createElement ('div');
+  divDadPokemon.id = 'cardsId';
+  divDadPokemon.className= "divContainerCards";
   dataDuplicate.forEach(function(tarjeta){
-    const divContenedor = document.createElement ('div');
+    const divContenedorCard = document.createElement ('div');
+    divContenedorCard.className= "divImgCard";
+    divContenedorCard.id=tarjeta.id;
+    divContenedorCard.addEventListener('click', conteo);      
+      function conteo(e){
+    alert('ha sido seleccionado');
+      var element=e.currentTarget.id;
+      console.log(element)
+
+
+    } 
     const imgPokemon = document.createElement('img');
-    divContenedor.className= "imgcard";
+   
     imgPokemon.src=tarjeta.image;
-    divContenedor.appendChild(imgPokemon)
-    cartaPokemon.appendChild(divContenedor);
+    divContenedorCard.appendChild(imgPokemon)
+    divDadPokemon.appendChild(divContenedorCard);
   })
-  return cartaPokemon
-  
+  return divDadPokemon  
 };
+
+/*clickAction.addEventListener('click',  myFunction);
+function myFunction(event) {
+  console.log(event)
+}*/
+
 
 export function random (array) {
   let currentIndex = array.length,  randomIndex;
@@ -41,13 +56,15 @@ export function random (array) {
       array[randomIndex], array[currentIndex]];
   }
 
- 
+ return array;
 }
 random (dataDuplicate);
 
 
 
- /*function duplicate() {
+
+
+ /*function duplicate() {  
   const duplicateDiv=document.getElementById("cardsId");
   const duplicate= duplicateDiv.cloneNode(true);
   document.getElementById("cardsId").appendChild(duplicate);
