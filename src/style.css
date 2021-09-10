@@ -1,0 +1,79 @@
+body {
+  background-color: #222;
+  color: limegreen;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+}
+
+select {
+  background-color: #111;
+  color: limegreen;
+  border: 1px solid #333;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.CardSetSelect {
+  margin-bottom: 15px;
+}
+
+.Board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Card {
+  width: 90px;
+  height: 90px;
+  transform-style: preserve-3d;
+  transition: 2s;
+  transform: rotateY(180deg);
+  background-color: #111;
+  border: 1px solid #000;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.Card img {
+  aspect-ratio: attr(width) / attr(height);
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 0;
+  display: block;
+  transition: 1s;
+  transition-delay: 0.5s;
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .Card {
+    width: 160px;
+    height: 160px;
+  }
+
+  .Card img {
+    width: 120px;
+    height: 120px;
+    padding: 20px;
+  }
+}
+
+.Card.active {
+  transform: rotateY(0deg);
+}
+
+.Card.active img {
+  opacity: 1;
+}
