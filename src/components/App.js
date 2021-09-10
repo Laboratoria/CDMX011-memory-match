@@ -1,4 +1,3 @@
-
 //
 // Para incluir los diferentes sets de cartas podemos _importar_ el archivo
 // JavasSript que contenga el `export` correspondiente...
@@ -12,16 +11,48 @@ import pokemon from '../data/pokemon/pokemon.js';
 export const App = () => {
   const divDadPokemon = document.createElement ('div');
   divDadPokemon.id = 'cardsId';
+  let firstSelection = null;
+  let secondSelection = null;
+
   divDadPokemon.className= "divContainerCards";
   dataDuplicate.forEach(function(tarjeta){
     const divContenedorCard = document.createElement ('div');
     divContenedorCard.className= "divImgCard";
-    divContenedorCard.id=tarjeta.id;
+    divContenedorCard.dataset.id = tarjeta.id;
+    console.log('debug 1', tarjeta)
     divContenedorCard.addEventListener('click', conteo);      
-      function conteo(e){
-    alert('ha sido seleccionado');
-      var element=e.currentTarget.id;
-      console.log(element)
+    
+    function conteo(e){
+      console.log('clicked')
+      const id = e.currentTarget.dataset.id;
+      
+      
+      if(firstSelection !== null) {
+        secondSelection = id
+        
+        if (firstSelection === secondSelection) {
+          alert('iguales')
+        }
+        
+        firstSelection = null;
+        secondSelection = null;
+      } else {
+        
+        firstSelection = id;
+      }
+
+
+      //const optionOneId = cardsChosenId[0]
+      //const optionTwoId = cardsChosenId[1]
+        /*
+      let firstclick = [];
+      Let secondclick= [];*/
+
+      //generar 2 variables que almacena el 1º click y otra el 2º click, ambos vacios
+      // registrar su valor o contenido 2( ID o tarjet)
+      // hacer score
+      // comparar valores (condicional )
+      //sume puntos
 
 
     } 
