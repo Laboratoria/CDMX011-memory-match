@@ -1,26 +1,44 @@
-//
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
-// JavasSript que contenga el `export` correspondiente...
-//
- //import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
- fetch('./data/pokemon/pokemon.json')
-  .then(resp => resp.json())
-  .then(console.log)
-  .catch(console.error);
+import  HarryPotter  from '../data/HarryPotter/HarryPotter.js';
+import { shuffle } from './Shuffle.js';
 
 
-const App = () => {
-  const el = document.createElement('div');
+const data = HarryPotter.items;
+const cardsPair = data.concat(data);
+let click = [];
 
-  el.className = 'App';
-  el.textContent = 'Hola mundo!';
+//HTML dinámico
+export const App = () => {
 
-  return el;
-};
+  const imgDiv = document.createElement('div');
+  imgDiv.className = 'App';
 
-export default App;
+  cardsPair.forEach(function(target){
+    const targDiv = document.createElement('div');
+    targDiv.className = 'targets';
+    const divFront = document.createElement ('div');
+    divFront.className = 'divFront';
+    const cardFront = document.createElement('img');
+    cardFront.src=target.image;
+    cardFront.className = 'front';
+   const divBack = document.createElement ('div');
+    divBack.className = 'divBack';
+    const cardBack = document.createElement('img');
+    cardBack.src= 'img/back-card.jpg';
+    cardBack.className = 'back';
+
+
+    divBack.append(cardBack)
+    divFront.append(cardFront)
+
+    targDiv.append(divBack)
+    targDiv.append(divFront)
+
+    imgDiv.append(targDiv)
+
+
+
+  })
+  return imgDiv
+}
+
+
