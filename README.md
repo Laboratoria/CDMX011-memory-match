@@ -13,23 +13,15 @@
 * [9. Checklist](#9-checklist)
 
 ***
+Belem Hernández MM-2 
 
-## 1. Preámbulo
+## 1. Memory Match
 
-El juego [_Memory Match_](https://en.wikipedia.org/wiki/Concentration_(card_game)),
-también conocido como _Concentration_, _Match Match_, _Match Up_, _Memory_,
-entre otros, es un juego de cartas en el que todas las cartas se ponen cara
-abajo sobre una superficie y se le dan la vuelta a dos cartas en cada turno. El
-objetivo del juego es destapar parejas de cartas que coincidan.
+El juego Memory Match,también conocido como _Concentration_, _Match Match_, _Match Up_, _Memory_,entre otros, es un juego de cartas en el que todas las cartas se ponen cara abajo sobre una superficie y se le dan la vuelta a dos cartas en cada turno. El objetivo del juego es destapar parejas de cartas que coincidan.
 
-![Concentration (card game)](https://upload.wikimedia.org/wikipedia/commons/4/4d/WMCZ_Protected_Areas_Card_Game-7_%28cropped%29.jpg)
+## 2. Protptipo de baja Fidelidad
 
-Ejemplos:
-
-* [Santa Tracker de Google](https://santatracker.google.com/matching.html)
-* [Match The Memory](https://matchthememory.com/play)
-
-## 2. Resumen del proyecto
+![Screenshot](./prototipoBF1.png)
 
 En este proyecto construirás una versión _web_ del juego _Memory Match_, en la
 que una jugadora pueda jugar sola, en el navegador.

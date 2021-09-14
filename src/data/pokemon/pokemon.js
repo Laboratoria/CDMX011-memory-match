@@ -13,6 +13,8 @@ export default {
     { id: 'blastoise', image: 'https://www.serebii.net/pokemongo/pokemon/010.png', bgColor: '#1572B6' },
     { id: 'blastoise', image: 'https://www.serebii.net/pokemongo/pokemon/011.png', bgColor: '#1572B6' },
     { id: 'blastoise', image: 'https://www.serebii.net/pokemongo/pokemon/012.png', bgColor: '#1572B6' },
+    { id: 'blastoise', image: 'https://www.serebii.net/pokemongo/pokemon/013.png', bgColor: '#1572B6' },
+    
   ],
 };
 

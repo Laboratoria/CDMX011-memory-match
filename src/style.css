@@ -22,7 +22,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color:purple;
+  background: linear-gradient(rgb(193, 168, 204),rgb(179, 133, 185),rgb(201, 98, 192));
+
 }
 .carta{
   display: block;
@@ -75,10 +76,10 @@ h1{
       font-size:15px;
 
     }
-    /*p{
-      font-family: Arial, Helvetica, sans-serif;
-      color:pink;
-   }*/
+    .carta{
+     width: 20px;
+     height: 30px;
+   }
    }
   
   
@@ -87,8 +88,9 @@ h1{
       font-size:25px;
 
     }
-    #parrafo2{
-      color: purple;
+    .carta{
+      width: 30px;
+      height: 45px;
     }
   }  
   
@@ -98,46 +100,78 @@ h1{
     h1{
       font-size:50px;
     }
-    
+    .carta{
+      width: 60px;
+      height: 90px;
+    }
    }
   
   
   @media (max-width: 1199.98px) { 
-
+    .carta{
+      width: 80px;
+      height: 120px;
+    }
   }
   
   
   @media (max-width: 1399.98px) { 
-
+    .carta{
+      width: 90px;
+      height: 130px;
+    }
   }
 
   .button-reset{
-    /*background-color:red; 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;*/
     background-color: #ff8811;
     border-radius: 50px;
+    box-shadow:5px 5px 10px black;
     color:white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display:inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 10px;
     cursor: pointer;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
+    height: 50px;
 
 }
 .button-reset:hover {
   background-color:rgb(141, 192, 250);
   color: white;
 }
-  
+.puntos{
+  background-color:purple;
+  padding: 25px;
+  max-width: 350px;
+  text-align: center;
+  border-radius: 5px;
+  margin:0 auto;
+  margin-top: 10%;
+  display:inline-block;
+}
+
+/*Inicia estilo para reloj*/
+.cronometro{
+  font-family: sans-serif;
+  font-size: 60px;
+  text-shadow: 0px 0px 1px #333;
+  color: white;
+}
+.minuto{
+  background-color:purple;
+  padding: 25px;
+  max-width: 350px;
+  text-align: center;
+  border-radius: 5px;
+  margin:0 auto;
+  margin-top: 10%;
+}
+#segundo{
+  letter-spacing: 10px;
+  font-size:15px ;
+}
+/*Terminan estilos para reloj*/

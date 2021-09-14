@@ -3,18 +3,26 @@ import { DoubleData } from '../utils/DoubleData.js'
 import { Shuffle } from '../utils/Shuffle.js'
 import { Carta } from './Card.js'
 import {ButtonReset} from '../components/ButtonReset.js'
+import {marcador} from '../components/puntos.js'
+/*import {cronometro} from '../components/cronometro.js'*/
 
 let cartas = [];
 let memoria = '';
-let puntos = 0;
 const pokemonDatos = DoubleData(pokemon.items)
 
 export const App = () => {
   const divContenedor = document.createElement('div');
   divContenedor.className = "contenedor";
-  divContenedor.appendChild(ButtonReset());
+  //traer el boton
+  const encabezado=document.getElementById("encabezado");
+  encabezado.appendChild(ButtonReset());
+  //declaro mi codigo para puntaje
+  let puntaje = marcador();
+  encabezado.appendChild(puntaje);
   const dataRandom = Shuffle(pokemonDatos);
   let contador = 0;
+  let puntos = 0;
+  /*mostrarCronometro();*/
   
   dataRandom.forEach(function(tarjeta){
     contador++;
@@ -23,11 +31,13 @@ export const App = () => {
     divContenedor.appendChild(carta);
     carta.setAttribute("id", "carta" + contador);
     carta.addEventListener("click", ()=> {
+      //REGREsa todos su hijos que contiene carta.
       let elementos = carta.childNodes;
       contador--;
+      //elementos 1 nos referimos a detras
       elementos[1].style.transition='all 0.5s';
       elementos[1].style.opacity =0;
-
+      
       let frente = elementos[0];
       let imagen = frente.childNodes;
       let rutaImagen = imagen[0].src;
@@ -35,21 +45,29 @@ export const App = () => {
         memoria = carta;
       }else{
         //si coinciden
-        if(rutaImagen==memoria.childNodes[0].childNodes[0].src){
-          puntos++;
-          memoria = '';
-        }else{ 
-          setTimeout(function(){
-            carta.childNodes[1].style.transition = 'all 0.5s';
-            carta.childNodes[1].style.opacity = 1;
-            memoria.childNodes[1].style.transition = 'all 0.5s';
-            //se había quedado abierta ahora la voy a cerrar
-            memoria.childNodes[1].style.opacity = 1;
+        if(memoria.getAttribute("id")!=carta.getAttribute("id")){
+          if(rutaImagen==memoria.childNodes[0].childNodes[0].src){ 
+            puntos=puntos+1;
+            /*console.log(puntaje);**/
+            let puntaje = document.getElementsByClassName("puntos");
+            puntaje[0].innerHTML=puntos;
+
             memoria = '';
-            contador=contador+2;
-            console.log(contador);
-          },1000);
-          
+          }else{ 
+          //Es para hacer un pequeño retraso 
+          //en caso de que no coincidan las voltea
+            setTimeout(function(){
+              carta.childNodes[1].style.transition = 'all 0.5s';
+              carta.childNodes[1].style.opacity = 1;
+              memoria.childNodes[1].style.transition = 'all 0.5s';
+              //se había quedado abierta ahora la voy a cerrar
+              memoria.childNodes[1].style.opacity = 1;
+              memoria = '';
+                //Se agrega el contador para contar cartas restantexs
+              contador=contador+2;
+              console.log(contador);
+            },1000);
+           } 
         }
       }
       /*console.log(rutaImagen);*/
@@ -59,5 +77,24 @@ export const App = () => {
   });
   return divContenedor;
 };
+
+/*Crear el espacio donde va mi puntaje*/
+
+
+/*export const mostrarCronometro = ()=>{
+  let divCronometro = document.createElement('div');
+  let divMinuto = document.createElement('div');
+  let divSegundo = document.createElement('div');
+  let encabezado = document.getElementById("encabezado");
+  encabezado.appendChild(divCronometro);
+  divCronometro.className = "cronometro";
+  divMinuto.className = "minutos";
+  divMinuto.innerHTML = "0";
+  divSegundo.className = "segundos";
+  divSegundo.innerHTML = "0";
+  divCronometro.appendChild(divMinuto);
+  divCronometro.appendChild(divSegundo);
+
+  };*/
 
 
