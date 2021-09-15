@@ -5,7 +5,7 @@ export const Carta = (pokemon) => {
     //Esta es la imágen que fue creada para lo de atrás
     const cartaAtras = document.createElement('div');
     const imagenAtras = document.createElement('img');
-    imagenAtras.src = "cartaRevesPoke.png";
+    imagenAtras.src = "assets/cartaRevesPoke.png";
     imgPokemon.src = pokemon.image;
     cartaPokemon.className = "carta";
     cartaFrente.className = "cara";

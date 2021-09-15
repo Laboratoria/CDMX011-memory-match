@@ -6,7 +6,6 @@ import { Shuffle } from '../utils/Shuffle.js'
 import { DoubleData } from '../utils/DoubleData.js'
 import { ButtonReset } from '../components/ButtonReset.js'
 
-
 let cartas = [];
 let memoria = '';
 const pokemonDatos = DoubleData(pokemon.items)
