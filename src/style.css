@@ -1,4 +1,22 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+/*.carta{
+    width: 60px;
+    height: 90px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 5px #525352;
+    border-radius: 3px;
+=======
+/*contenido de todo 
+conten 
+display: flex;
+flex-wrap: wrap;
+contenido de la tarjeta*/
+=======
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower&effect=shadow-multiple&display=swap');
+>>>>>>> belem2
 
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Luckiest+Guy&display=swap');
 *{
@@ -34,6 +52,11 @@
   border-radius: 3px;
   margin: 20px;
 }
+<<<<<<< HEAD
+>>>>>>> 14317225e6221c70339a3c975675b47841a5f179
+
+=======
+>>>>>>> belem2
 .cara {
   height: inherit;
   width: inherit;
