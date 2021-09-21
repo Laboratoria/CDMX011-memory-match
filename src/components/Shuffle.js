@@ -6,5 +6,5 @@ export function shuffle (array){
     array [i] = array [random];
     array [random] = temporary;
   }
-  return shuffle(cardsPair)
+  return array
 }

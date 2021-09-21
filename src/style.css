@@ -50,14 +50,15 @@ h1{
 .targets{
   display: inline-block;
   text-align: center;
-  width:  170px;
-  height: 290px;
-  margin: 25px 25px;
-  padding: 12px 12px;
+  width:  125px;
+  height: 215px;
+  margin: 12px 10px;
+  padding: 10px 10px;
   background:-webkit-linear-gradient(top,rgba(5, 9, 22, 0.555) 50%,rgba(12, 24, 66, 0.473));
   border-radius: 10px;
   position: relative;
   transform-style:preserve-3d;
+  animation: initial 5s;
 
 }
 
@@ -66,32 +67,39 @@ h1{
   width: inherit;
   position: absolute;
   backface-visibility: hidden;
+  transform: rotateY(180deg);
 }
 
 .divBack{
   position: absolute;
   width: inherit;
   height: inherit;
-
-  transform: rotateY(180deg);
 }
-
-.targets:hover{
-  transform: rotateY(180deg);
-}
-
 
 #audio{
-  display: none;
+  display:block;
   }
 
 .front{
-  width: 160px;
-  height: 280px;
+  width: 125px;
+  height: 210px;
   border-radius: 10px;
 }
 .back{
-  width: 160px;
-  height: 280px;
+  width: 120px;
+  height: 210px;
   border-radius: 10px;
+}
+
+.btnNewGame{
+  background:rgba(76, 74, 72, 0.3);
+  border-radius: 5px;
+  position: absolute;
+  width: 142px;
+  height: 42px;
+  left: 212px;
+  top: 78px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #D4A00B;
 }
