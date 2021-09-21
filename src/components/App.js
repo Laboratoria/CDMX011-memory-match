@@ -31,10 +31,10 @@ export const App = () => {
     divContenedor.appendChild(carta);
     carta.setAttribute("id", "carta" + contador);
     carta.addEventListener("click", ()=> {
-      //REGREsa todos su hijos que contiene carta.
+      //regresa todos su hijos que contiene carta.
       let elementos = carta.childNodes;
       contador--;
-      //elementos 1 nos referimos a detras
+      //elementos [1] nos referimos a detras
       elementos[1].style.transition='all 0.5s';
       elementos[1].style.opacity =0;
       
@@ -48,7 +48,6 @@ export const App = () => {
         if(memoria.getAttribute("id")!=carta.getAttribute("id")){
           if(rutaImagen==memoria.childNodes[0].childNodes[0].src){ 
             puntos=puntos+1;
-            /*console.log(puntaje);**/
             let puntaje = document.getElementsByClassName("puntos");
             puntaje[0].innerHTML=puntos;
 
