@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&effect=shadow-multiple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Luckiest+Guy&display=swap');
+*{
+  padding: 0%;
+  margin: 0%;
+}
+#encabezado{
+  background-image: url("./assets/imgEncabezado.jpg");
+  width: 100%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.contenedor{
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: linear-gradient(rgb(193, 168, 204),rgb(179, 133, 185),rgb(201, 98, 192));
+
+}
+.carta{
+  display: block;
+  width:150px;
+  height: 200px;
+  background-color: white;
+  box-shadow: 5px 5px 5px #525352;
+  border-radius: 3px;
+  margin: 20px;
+}
+
+.cara {
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  backface-visibility: hidden;
+  background-color: white;
+  
+}
+.detras{
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  
+}
+.cara img{
+  width: inherit;
+}
+
+.detras img{
+  width:inherit;
+  height: inherit;
+}
+
+.detras {
+  transform: rotateY(180deg);
+}
+.carta:hover{
+  transform: rotateY(180deg);
+}
+h1{
+  color: #ff8811;
+  text-align: left;
+  font-family: 'Indie Flower', cursive;
+  font-size: 90px;
+  text-shadow: 4px 4px 4px black;
+} 
+
+  @media (max-width: 575.98px) { 
+    h1{
+      font-size:15px;
+
+    }
+    .carta{
+     width: 20px;
+     height: 30px;
+   }
+   }
+  
+  
+  @media (max-width: 767.98px) { 
+    h1{
+      font-size:25px;
+
+    }
+    .carta{
+      width: 30px;
+      height: 45px;
+    }
+  }  
+    
+  @media (max-width: 991.98px) { 
+    h1{
+      font-size:50px;
+    }
+    .carta{
+      width: 60px;
+      height: 90px;
+    }
+   }
+    
+  @media (max-width: 1199.98px) { 
+    .carta{
+      width: 80px;
+      height: 120px;
+    }
+  }
+  
+  
+  @media (max-width: 1399.98px) { 
+    .carta{
+      width: 90px;
+      height: 130px;
+    }
+  }
+
+  .button-reset{
+    background-color: #ff8811;
+    border-radius: 50px;
+    box-shadow:5px 5px 10px black;
+    color:white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    height: 50px;
+
+}
+.button-reset:hover {
+  background-color:rgb(141, 192, 250);
+  color: white;
+}
+.puntos{
+  background-color:purple;
+  color: antiquewhite;
+  padding: 25px;
+  max-width: 150px;
+  text-align: center;
+  border-radius: 5px;
+  margin-left:850px;
+  /*margin-top: 10%;*/
+  display:inline-block;
+}
+
