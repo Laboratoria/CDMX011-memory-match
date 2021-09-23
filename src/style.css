@@ -27,6 +27,30 @@ header h1{
   text-shadow: 2px 2px 2px rgb(1, 86, 155);
 }
 
+.score{
+  color: #ffffff;
+  text-align: left;  
+  font-size: 30px;
+  padding: 3px 30px;
+  text-shadow: 2px 2px 2px rgb(1, 86, 155);  
+}
+
+.reset {
+position: fixed;
+bottom: 15px;
+left: 15px;
+}
+.reset .pokebola{
+  cursor: pointer;
+  border-radius: 50%;
+  width:70px;
+  filter: sepia(50%);  
+}
+.reset .pokebola:hover{
+  filter: sepia(0);
+  transition: .4s ease;
+}
+
 /*header{
 	position:sticky;
 	background-image:url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d6771837-725e-4247-9018-8e7d4e34e9df/d96qqpq-480e9880-4ba9-4418-ba71-15ca1fb74588.png/v1/fill/w_1024,h_265,q_80,strp/pokemon_header_by_lake90_d96qqpq-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjY1IiwicGF0aCI6IlwvZlwvZDY3NzE4MzctNzI1ZS00MjQ3LTkwMTgtOGU3ZDRlMzRlOWRmXC9kOTZxcXBxLTQ4MGU5ODgwLTRiYTktNDQxOC1iYTcxLTE1Y2ExZmI3NDU4OC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.92I9dk-fopE0jJtnNIeMJzPkvvYHh30i0CWlN6nVJ5k);
@@ -38,18 +62,21 @@ header h1{
 	left: 0;
   }
   */
-	
+	.divContainerCards{
+  position: relative;
+   
+  }
 
-  .divImgCard img{
+  .divImgCardFront img{
     filter: drop-shadow(0 2px 5px rgb(121, 99, 99));  
     padding: 7px 7px;
   }
   
-  .divImgCard:hover img{
+  .divImgCardFront:hover img{
     transform: rotate(10deg); /*genera rataciòn al pasar el puntero */
   }
 
-.divImgCard{	
+.divImgCardFront{	
     
     margin: 15px 15px;/*margen de la tarjeta*/
     width: 190px;/*ancho de carta*/
@@ -60,11 +87,36 @@ header h1{
     background-image: linear-gradient(135deg, #f5f7fa93 0%, #c3cfe298 100%);
     display: flex;
     justify-content: center; /* distribuye el espacio libre entre los elementos */
+    cursor: pointer;
+    pointer-events: auto;
+    /*position: absolute;*/
     
+  }  
+
+  .divImgCardBack img{
+    filter: drop-shadow(0 2px 5px rgb(121, 99, 99));  
+    padding: 7px 7px;
     
+  } 
+
+.divImgCardBack{	
+    
+    margin: 15px 15px;/*margen de la tarjeta*/
+    width: 190px;/*ancho de carta*/
+    height: 190px; /*largo de carta*/
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.445); /*sombra*/
+    border-radius: 30px;
+    padding: 5px 5px;    
+    display: flex;
+    justify-content: center; /* distribuye el espacio libre entre los elementos */
+    cursor: pointer;
+    pointer-events: auto; 
+     
+    
+        
   }
-  
-.divContainerCards{
+
+.divContainer{
   display: flex;
   flex-direction: row; /*  establece la direcciòn como el modo de escritura */
   flex-wrap: wrap; /* en varias lineas (multilinea) */

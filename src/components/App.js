@@ -5,33 +5,86 @@
 import pokemon from '../data/pokemon/pokemon.js';
  //console.log(pokemon);
  const dataPokemon=pokemon.items;
- const dataDuplicate=dataPokemon.concat(dataPokemon)
+ const dataDuplicate=dataPokemon.concat(dataPokemon);
  //console.log(dataPokemon);
+ const scoreCard= document.querySelector('.score');
 
+
+ const resetGame=document.getElementById('resetPoke');
+
+
+ 
 export const App = () => {
-  const divDadPokemon = document.createElement ('div');
-  divDadPokemon.id = 'cardsId';
+  
+  //generar 2 variables que almacena el 1º click y otra el 2º click, ambos vacios
   let firstSelection = null;
   let secondSelection = null;
+  // hacer score
+  let score = 0;
 
-  divDadPokemon.className= "divContainerCards";
+
+  const divDadPokemon = document.createElement ('div');
+  divDadPokemon.className= "divContainer";
+  
   dataDuplicate.forEach(function(tarjeta){
-    const divContenedorCard = document.createElement ('div');
-    divContenedorCard.className= "divImgCard";
-    divContenedorCard.dataset.id = tarjeta.id;
+    const cardsTwoDiv=document.createElement ('div');
+    cardsTwoDiv.className="divContainerCards"
+
+    const divContCardFront = document.createElement ('div');
+    divContCardFront.className= `divImgCardFront ${tarjeta.id}`;
+    divContCardFront.dataset.id = tarjeta.id;
     console.log('debug 1', tarjeta)
-    divContenedorCard.addEventListener('click', conteo);      
-    
+    const imgPokemonFront = document.createElement('img');   
+    imgPokemonFront.src=tarjeta.image;
+    imgPokemonFront.className="front";
+
+    const divContCardBack = document.createElement ('div');
+    divContCardBack.className= "divImgCardBack"; 
+    const imgPokemonBack = document.createElement('img');
+    imgPokemonBack.src='data/img/backimg.jpg';
+    imgPokemonBack.className='back';      
+
+
+    divContCardFront.append(imgPokemonFront);    
+    divContCardBack.append(imgPokemonBack);
+
+    cardsTwoDiv.append(divContCardFront);
+    cardsTwoDiv.append(divContCardBack);
+
+    divDadPokemon.append(cardsTwoDiv)
+
+
+
+    //selecciòn de tarjetas
+    divContCardFront.addEventListener('click', conteo);    
     function conteo(e){
-      console.log('clicked')
-      const id = e.currentTarget.dataset.id;
-      
+      console.log('debug 2' , e.currentTarget);
+      //console.log('clicked');
+      const eCurtTarg=e.currentTarget;
+      const id = eCurtTarg.dataset.id; 
+     
+      /*if(eCurtTarg.className==="divImgCardBack") {
+        eCurtTarg.style.transform="rotateY(180deg)";
+        eCurtTarg.style.transition="1s";
+      }   */
       
       if(firstSelection !== null) {
         secondSelection = id
-        
+       
+        console.log('debug 3', firstSelection);
+        console.log('debug 4', secondSelection);
+        // comparar valores (condicional )
         if (firstSelection === secondSelection) {
-          alert('iguales')
+          alert('¡¡¡si son iguales!!!')
+          const cardOfSelection = document.querySelector(`.${firstSelection}`)
+          const cardOfSelection2 = document.querySelectorAll(`.${secondSelection}`)[1]
+          cardOfSelection.style.pointerEvents = "none";
+          cardOfSelection2.style.pointerEvents = "none";
+          console.log('debug 6', cardOfSelection);
+          //sume puntos
+          score++
+          console.log('debug 5', score);
+          scoreCard.innerHTML = `score: ${score}`; //generar conteo
         }
         
         firstSelection = null;
@@ -40,27 +93,7 @@ export const App = () => {
         
         firstSelection = id;
       }
-
-
-      //const optionOneId = cardsChosenId[0]
-      //const optionTwoId = cardsChosenId[1]
-        /*
-      let firstclick = [];
-      Let secondclick= [];*/
-
-      //generar 2 variables que almacena el 1º click y otra el 2º click, ambos vacios
-      // registrar su valor o contenido 2( ID o tarjet)
-      // hacer score
-      // comparar valores (condicional )
-      //sume puntos
-
-
     } 
-    const imgPokemon = document.createElement('img');
-   
-    imgPokemon.src=tarjeta.image;
-    divContenedorCard.appendChild(imgPokemon)
-    divDadPokemon.appendChild(divContenedorCard);
   })
   return divDadPokemon  
 };
@@ -69,6 +102,13 @@ export const App = () => {
 function myFunction(event) {
   console.log(event)
 }*/
+
+resetGame.addEventListener('click', reset);
+function reset(e) {
+  console.log('clicked')
+  e.preventDefault();
+  location.reload(); 
+}
 
 
 export function random (array) {
