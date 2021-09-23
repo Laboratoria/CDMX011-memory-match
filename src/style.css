@@ -64,7 +64,7 @@
   transform: rotateY(180deg);
 }
 h1{
-  color: #ff8811;
+  color: purple;
   text-align: left;
   font-family: 'Indie Flower', cursive;
   font-size: 90px;
@@ -120,7 +120,7 @@ h1{
   }
 
   .button-reset{
-    background-color: #ff8811;
+    background-color: #1783ca;
     border-radius: 50px;
     box-shadow:5px 5px 10px black;
     color:white;

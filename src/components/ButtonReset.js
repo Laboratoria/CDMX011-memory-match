@@ -1,6 +1,6 @@
 export const ButtonReset = () => {
       let boton = document.createElement("button");
-      boton.textContent = 'iniciar juego';
+      boton.textContent = 'Reiniciar';
       boton.classList.add('button-reset')
       boton.addEventListener("click", (e)=>{
           e.preventDefault();
