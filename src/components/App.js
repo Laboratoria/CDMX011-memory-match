@@ -8,7 +8,8 @@ let selectedOne = null; //guarda cartas cliqueadas
 let selectedTwo = null; //guarda cartas que hicieron match
 let memory = [];
 let score = 0; //puntaje
-//HTML dinámico
+
+
 export const App = () => {
 
   const imgDiv = document.createElement('div');
