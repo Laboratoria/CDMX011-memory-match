@@ -3,7 +3,10 @@
 // JavasSript que contenga el `export` correspondiente...
 //
 import pokemon from "../data/pokemon/pokemon.js";
-import { suffle, cardContainer, button, duplicateData } from "../utils.js";
+import { suffle, duplicateData } from "../utils.js";
+import { button } from "./button.js";
+import { cardContainer } from "./cards.js";
+
 
 const pokemonData = pokemon.items;
 const arrayDuplicate = duplicateData(pokemonData)
@@ -13,14 +16,15 @@ export const App = () => {
   const container = document.createElement("div");
   container.id = "container";
   container.appendChild(button())
+ //button().addEventListener("click", function(){
   const revolverData = suffle(arrayDuplicate)
   container.appendChild(cardContainer(revolverData)) 
-
+  return container
+  }
   //mostrarTarjetas(revolverData).forEach(card=>container.appendChild(card))
  
-  return container
-  };
 
+  
 
 
 

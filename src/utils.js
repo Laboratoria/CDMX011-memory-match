@@ -17,63 +17,36 @@ export function suffle(pokemonData) {
     pokemonData[i] = random;
   }
   return pokemonData;
-}
+}  
 
-
-
-//mostrar imagenes
-const carta= (card) => {
-  const cards = document.createElement("div")
-  cards.setAttribute("id","cards")
-  //cards.id="cards"
-  const imagenPokemon = document.createElement("img")
-  imagenPokemon.src= card.image;
-  cards.appendChild(imagenPokemon) 
-  const nombre = document.createElement("h3")
-  nombre.textContent = card.id
-  cards.appendChild(nombre)
- 
- 
-//cards.insertBefore(imagenPokemon, text)
-  return cards
-};
-
-//Separar cada imagen 
-export const cardContainer = (data) => {
-  const container = document.createElement("div")
-  container.id = "cardsContainer"
-    data.forEach(function(card){
-    container.appendChild(carta(card))
-  });
-  // eslint-disable-next-line no-console
-  //console.log(container)
-  return container
-}
-
-//Crear Boton Aleatorio
-export const button =()=>{
-  const containerButton = document.createElement("div");
-  containerButton.id="divButton"
-  const button= document.createElement("button")
-  button.id= "button"
-  button.textContent ="Play"
-  containerButton.appendChild(button)
-  button.addEventListener("click", function(){
-    const container= document.getElementById("cardsContainer")
-    const cards = document.getElementById("cards")
-    const revolverData = suffle(cards)
-    container.appendChild(revolverData)  
-    
-  }) 
-
-  return containerButton
+/* export function suffle (data) {
+  data.map(function (data, i) {
+    const random= Math.floor(Math.random() * (data.length - i)) + i;
+    let temp = data[i];
+   data[i] = data[random];
+   data[random] = temp;
+  })
+  return data;
 } 
+ */
+
+
+
 
 //Seleccionar Dos cartas iguales
 //checkIfPair(card1, card2) {
   // ... write your code here
 //}
-
+// Función para encontrar el par de la carta
+/* export function match(card1, card2) {
+  if(card1[0] =(card1[1]) {
+    paresEncontrados = paresEncontrados + 1;
+    for (let i= (card1.length - 1; i > -1; i--) {
+      card2[i.style.visibility = "hidden";
+    }
+    
+  }(card1.length = 0); // permite escoger más de 1 par
+} */
 
 
  
