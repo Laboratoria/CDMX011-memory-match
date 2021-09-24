@@ -1,7 +1,9 @@
+import { Carta } from './Card.js'
+import { Shuffle } from '../utils/Shuffle.js'
 import pokemon from '../data/pokemon/pokemon.js';
 import { DoubleData } from '../utils/DoubleData.js'
-import { Shuffle } from '../utils/Shuffle.js'
-import { Carta } from './Card.js'
+
+
 
 const pokemonDatos = DoubleData(pokemon.items)
 
