@@ -1,10 +1,13 @@
 import  HarryPotter  from '../data/HarryPotter/HarryPotter.js';
 import {shuffle} from '../components/Shuffle.js';
-import { newGame } from './newGame.js';
+import {newGame} from './newGame.js';
 
 const data = HarryPotter.items;
 const cardsPair = data.concat(data);
+let selectedOne = null; //guarda cartas cliqueadas
+let selectedTwo = null; //guarda cartas que hicieron match
 let memory = [];
+let score = 0; //puntaje
 //HTML dinámico
 export const App = () => {
 
@@ -21,6 +24,7 @@ export const App = () => {
   shuffleCard.forEach(function(target){
     const targDiv = document.createElement('div');
     targDiv.className = 'targets';
+    targDiv.dataset.id = target.id;
     const divFront = document.createElement ('div');
     divFront.className = 'divFront';
     const cardFront = document.createElement('img');
@@ -46,9 +50,26 @@ export const App = () => {
         if(element.className === "targets"){
          element.style.transform = "rotateY(180deg)";
          element.style.transition = "1s";
-
         }
+
+            const id = e.currentTarget.dataset.id;
+
+            if (selectedOne == null) {
+              selectedOne = id;
+              console.log(selectedOne)
+            } else {selectedTwo = id}
+            console.log(selectedTwo)
+            if (selectedOne == selectedTwo){
+             score +=100;
+              alert ("Very good, you found the pair!");
+              targDiv.style.backgroundColor = "white";
+              console.log(score)
+            }
+
+
+
     });
+
 
   })
   return imgDiv
