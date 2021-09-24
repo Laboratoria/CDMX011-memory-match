@@ -1,10 +1,10 @@
 import pokemon from '../data/pokemon/pokemon.js';
-
-import { Carta } from './Card.js'
-import { Points } from '../utils/Points.js'
-import { Shuffle } from '../utils/Shuffle.js'
 import { DoubleData } from '../utils/DoubleData.js'
-import { ButtonReset } from '../components/ButtonReset.js'
+import { Shuffle } from '../utils/Shuffle.js'
+import { Carta } from './Card.js'
+import {ButtonReset} from '../components/ButtonReset.js'
+import {marcador} from '../components/puntos.js'
+/*import {cronometro} from '../components/cronometro.js'*/
 
 let cartas = [];
 let memoria = '';
@@ -16,12 +16,12 @@ export const App = () => {
   //traer el boton
   const encabezado=document.getElementById("encabezado");
   encabezado.appendChild(ButtonReset());
-  //declaro mi codigo para puntaje
-  let puntaje = Points();
+  let puntaje = marcador();
   encabezado.appendChild(puntaje);
   const dataRandom = Shuffle(pokemonDatos);
   let contador = 0;
   let puntos = 0;
+  
   /*mostrarCronometro();*/
   
   dataRandom.forEach(function(tarjeta){
@@ -31,10 +31,10 @@ export const App = () => {
     divContenedor.appendChild(carta);
     carta.setAttribute("id", "carta" + contador);
     carta.addEventListener("click", ()=> {
-      //regresa todos su hijos que contiene carta.
+      //REGREsa todos su hijos que contiene carta.
       let elementos = carta.childNodes;
       contador--;
-      //elementos [1] nos referimos a detras
+      //elementos 1 nos referimos a detras
       elementos[1].style.transition='all 0.5s';
       elementos[1].style.opacity =0;
       
@@ -48,6 +48,7 @@ export const App = () => {
         if(memoria.getAttribute("id")!=carta.getAttribute("id")){
           if(rutaImagen==memoria.childNodes[0].childNodes[0].src){ 
             puntos=puntos+1;
+            /*console.log(puntaje);**/
             let puntaje = document.getElementsByClassName("puntos");
             puntaje[0].innerHTML=puntos;
 
