@@ -5,21 +5,25 @@
 // console.log(pokemon);
 
 import Titulo from "./Titulo.js";
+import mainTarjeta from "./mainTarjet.js";
+
+
+
+
 
 const App = () => {
-const el = document.createElement('div');
-  
-  el.className = 'tituloMemo';
-  el.appendChild(Titulo());
-  
-  
+const elDiv = document.createElement('div');
 
 
-   
   
- 
+elDiv.className = 'App';
+elDiv.appendChild(Titulo());
+elDiv.appendChild(mainTarjeta()); 
 
-  return el;
+
+
+
+  return elDiv;
 };
 
 export default App;
