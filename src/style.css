@@ -89,7 +89,7 @@ left: 15px;
     justify-content: center; /* distribuye el espacio libre entre los elementos */
     cursor: pointer;
     pointer-events: auto;
-    /*position: absolute;*/
+    position: absolute;
     
   }  
 
