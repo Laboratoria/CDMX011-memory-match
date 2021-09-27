@@ -57,13 +57,16 @@ header {
   margin: 20px;
   width: 150px;
   height: 140px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
  
 }
-.contenedor{
+ .contenedor{
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.8s;
+  
 }
 
 .frontCard {
@@ -75,9 +78,7 @@ header {
   justify-content: center;
   text-align: center;
   transform: rotateY(180deg);
-  pointer-events: none;
 
- 
 
 }
 
@@ -88,11 +89,8 @@ img {
 h3 {
   text-align: center;
   font-size: 20px;
-  pointer-events: none;
 }
-.cardShow{ 
-  transform: rotateY(180deg)
-}
+
  
 .backCard {
   position: absolute;
@@ -109,6 +107,10 @@ h3 {
  
  
 }
+.cardShow{ 
+  transform: rotateY(180deg)
+}
+
 
 .selected {
   border: 1px solid rgb(72, 255, 0);

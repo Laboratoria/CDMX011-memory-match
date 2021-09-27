@@ -1,6 +1,6 @@
 
 
-
+/* 
 const selector= document.querySelectorAll(".cardContainer")
 selector.addEventListener("click", function (e) {
  let clicked = e.target
@@ -13,7 +13,7 @@ selector.addEventListener("click", function (e) {
     clicked.classList.add("selected")
    })
  }
-
+ */
 
 /* //Selecionar 2 tarjetas
 let firstSelection=null
