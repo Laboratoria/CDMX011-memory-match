@@ -1,10 +1,9 @@
 import pokemon from '../data/pokemon/pokemon.js';
-import { DoubleData } from '../utils/DoubleData.js'
-import { Shuffle } from '../utils/Shuffle.js'
-import { Carta } from './Card.js'
-import {ButtonReset} from '../components/ButtonReset.js'
-import {marcador} from '../components/puntos.js'
-/*import {cronometro} from '../components/cronometro.js'*/
+import { DoubleData } from '../utils/DoubleData.js';
+import { Shuffle } from '../utils/Shuffle.js';
+import { Carta } from './Card.js';
+import {ButtonReset} from '../components/ButtonReset.js';
+import { Points } from '../utils/Points';
 
 let cartas = [];
 let memoria = '';
@@ -16,7 +15,7 @@ export const App = () => {
   //traer el boton
   const encabezado=document.getElementById("encabezado");
   encabezado.appendChild(ButtonReset());
-  let puntaje = marcador();
+  let puntaje = Points();
   encabezado.appendChild(puntaje);
   const dataRandom = Shuffle(pokemonDatos);
   let contador = 0;
@@ -65,14 +64,11 @@ export const App = () => {
               memoria = '';
                 //Se agrega el contador para contar cartas restantexs
               contador=contador+2;
-              console.log(contador);
-            },1000);
+              },1000);
            } 
         }
       }
-      /*console.log(rutaImagen);*/
-      /*alert(rutaImagen);*/
-    });
+   });
     cartas.push(carta);
   });
   return divContenedor;
