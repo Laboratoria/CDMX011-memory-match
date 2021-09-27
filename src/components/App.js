@@ -4,11 +4,20 @@
 // import pokemon from '../data/pokemon/pokemon.js';
 // console.log(pokemon);
 
-const App = () => {
-  const el = document.createElement('div');
+import Titulo from "./Titulo.js";
 
-  el.className = 'App';
-  el.textContent = 'Hola mundo!';
+const App = () => {
+const el = document.createElement('div');
+  
+  el.className = 'tituloMemo';
+  el.appendChild(Titulo());
+  
+  
+
+
+   
+  
+ 
 
   return el;
 };
