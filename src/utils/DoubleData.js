@@ -7,5 +7,5 @@ export const DoubleData = (pokemonDatos) =>{
     dataDubble.push(pokemon);
     dataDubble.push(pokemon);
   })
-  return dataDubble
+  return dataDubble;
 }

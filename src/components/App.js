@@ -1,5 +1,5 @@
 import pokemon from '../data/pokemon/pokemon.js';
-import { DoubleData } from '../utils/DoubleData.js';
+import { DoubleData } from '../components/DoubleData.js';
 import { Shuffle } from '../utils/Shuffle.js';
 import { Carta } from './Card.js';
 import {ButtonReset} from '../components/ButtonReset.js';
