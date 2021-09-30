@@ -8,9 +8,12 @@ const dataDuplicada = arrayPokemons.concat(arrayPokemons);
 const Board = () => {
     const divBoard = document.createElement('div');
     divBoard.className = 'Board';
+
+    function flipCard(){
+      this.classList.toggle('Card');
+    }
     
-    // divBoard.appendChild(card())
-    dataDuplicada.forEach(unPokemon => divBoard.appendChild(card(unPokemon)));
+    dataDuplicada.forEach(unPokemon => divBoard.appendChild(card(unPokemon, flipCard)));
     console.log(dataDuplicada);
   
 
