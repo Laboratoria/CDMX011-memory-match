@@ -2,7 +2,7 @@
 body {
     background-color: rgb(63, 89, 99);
 }
-header {
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,79 @@ header {
     font-weight: bold;
     margin-top: 7px;
 }
-.bar {
+.gameBoard {
+    background: rgba(228, 228, 228, 1);
+    height: 640px;
+    width: 750px;
+    padding: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    margin:auto;
+}
+.card {
+    display:flex;
+    margin:5px;
+    padding: 15px;
+    position: relative;
+    background-color: rgb(146, 145, 145); 
+    border: 1px solid rgb(136, 136, 136);
+    width: 110px;
+    height: 110px;
+    border-radius: 5px; 
+    transform-style: preserve-3d;
+    word-wrap: break-word;
+    justify-content:space-between;
+    align-items: center;
+    transform: scale(1);
+    cursor: pointer;
+} 
+.frontcard {
+    position:absolute;
+    justify-items: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: -.03em;
+    color:black;
+}
+.backcard {
+    background-color: rgb(146, 145, 145);;
+    color: black;
+    border: 1px solid rgb(136, 136, 136);
+    width: 115px;
+    height: 115px;
+    border-radius: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    transform: rotateY(180deg);
+    word-wrap: break-word;
+    backface-visibility: hidden;
+}
+.card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+.buttonShuffler {
+    display: flex;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: rgba(228, 228, 228, 1);
+    border-radius: 7px; 
+}
+/*.bar {
     display:flex;
     display:-webkit-flex;
     display:-ms-flexbox;
@@ -58,56 +130,10 @@ header {
     text-align: center;
     position: relative;
 }
-.card {
-    display:flex;
-    margin:5px;
-    padding: 5px;
-    position: relative;
-    background-color: rgb(146, 145, 145); 
-    border: 1px solid rgb(136, 136, 136);
-    width: 115px;
-    height: 115px;
-    border-radius: 5px; 
-    transform-style: preserve-3d;
-    word-wrap: break-word;
-    justify-content: center;
-    align-items: center;
-    transform: scale(1);
-    cursor: pointer;
-} 
-.card:active {
-    transform: scale(.97);
-    transition: transform .2s;
-}
-.frontcard {
-    position:absolute
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    letter-spacing: -.03em;
-    font-size: 20px;
-    color: black;
-    text-align: center;
-    justify-items; center;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-} 
-.backcard {
-    background-color: rgb(146, 145, 145);;
-    color: black;
-    border: 1px solid rgb(136, 136, 136);
-    width: 115px;
-    height: 115px;
-    border-radius: 5px;
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-    transform: rotateY(180deg);
-    word-wrap: break-word;
-    backface-visibility: hidden;
-    
-}
+
+
+
+
 .card:hover{
     transform:rotateY(180deg);
     transition: all .7s ease; 
@@ -116,21 +142,10 @@ header {
     position: absolute;
     top: 80px;
 }
-#shuffler {
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 21px;
-    background-color: rgba(228, 228, 228, 1);
-    border-radius: 7px;
-    /*margin:auto;
-    position: absolute;
-    left: 655px;
-    top: 753px;*/
-} 
-
-/* footer {
+/*
+footer {
     background: rgba(228, 228, 228, 1);;
-    display:flex;
+    display:flex;3
     align-content: center;
     position:absolute;
     top:730px;

@@ -1,26 +1,33 @@
-import data from '../data/webdev/webdev.js';
+const card = (eachCard) => {
+    const cardelement = document.createElement('div');
+    cardelement.className = 'card';
+    cardelement.addEventListener('click')
 
-export const card = () => {
-let devsHtml = "";
-// let devsArray = data.items;
-let cloneDevs = data.items;
-cloneDevs = cloneDevs.concat(devsArray);
-cloneDevs.forEach((eachDev) => {
-    devsHtml += `<div class="container">
-    <div class="card">
-    <div class="frontcard"
-    <p>guess the dev<br>?</p>
-    </div>
-    <div class="backcard">
-    <img src=${eachDev.image} height="65px" width="50px"/>
-    <p>${eachDev.id}</p>
-    </div>
-    </div>
-    </div>`;
-})
-document.getElementById("root").innerHTML = devsHtml;
+    const frontcard = document.createElement('div');
+    frontcard.className = 'frontcard';
+
+    const backcard = document.createElement('div');
+    backcard.className = 'backcard';
+
+    const frontp = document.createElement('p');
+    frontp.textContent = 'hey! guess the dev';
+
+    const backp = document.createElement('p');
+    backp.textContent = eachCard.id
+
+    const img = document.createElement('img');
+    img.src = eachCard.image
+    img.height = 60;
+    img.width = 50;
+
+    frontcard.appendChild(frontp);
+    backcard.append(img, backp);
+
+    cardelement.append(frontcard, backcard)
+
+    return cardelement;
 }
-
+export default card;
 
 
 

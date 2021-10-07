@@ -1,10 +1,10 @@
 import { card } from "./card"
 
-function flipCard (){
-    this.classList.toggle('flip')
+ function flipCard (){
+     this.classList.toggle('flip')
 
-}
-card.forEach(card.addEventListener('click', flipCard))
+ }
+ card.forEach(card.addEventListener('click', flipCard))
 
 
 
