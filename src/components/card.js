@@ -1,7 +1,7 @@
-const card = (eachCard) => {
+const card = (eachCard, flipCard) => {
     const cardelement = document.createElement('div');
     cardelement.className = 'card';
-    cardelement.addEventListener('click')
+    cardelement.addEventListener('click', flipCard)
 
     const frontcard = document.createElement('div');
     frontcard.className = 'frontcard';
