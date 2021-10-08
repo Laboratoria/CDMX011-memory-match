@@ -1,59 +1,73 @@
-
-import data from '../data/pokemon/pokemon.js';
-import card from "./card.js";
-
+import data from "../data/pokemon/pokemon.js";
+import Card from "./Card.js";
 
 const arrayPokemons = data.items;
-const dataDuplicada = arrayPokemons.concat(arrayPokemons); 
+const dataDuplicada = arrayPokemons.concat(arrayPokemons);
 
+const Board = () => {
+  //Esté es mi divBoard
+  let flippedElements = []
+  let matches = 0
 
- const Board = () => {
+  const divBoard = document.createElement("div");
+  divBoard.className = "Board";
 
-    //Esté es mi divBoard 
-    const divBoard = document.createElement('div');
-    divBoard.className = 'Board';
-    
-    //Aquí vamos hacer match comparando el id de las tarjetas
-    // divBoard.dataset.id = arrayPokemons.id; 
- 
+  //Aquí vamos hacer match comparando el id de las tarjetas
+  // divBoard.dataset.id = arrayPokemons.id;
 
-    //Está es otra forma de llamar la función flip 
-    let selectedItems = []
-    function flipCard(event) {
-      //console.log(event.target);
-      let selectedElement = event.currentTarget
-      const selectedId = event.currentTarget.dataset.id 
-      selectedItems.push(selectedId)
-      selectedElement.classList.toggle('Card');
-      
+  //Está es otra forma de llamar la función flip
+  function flipCard(e) {
+    const el = e.currentTarget
+
+    if (flippedElements.length === 2) {
+      return
     }
 
-      function checkForMatch (event) { 
-     if(selectedItems[0] === selectedItems[1]){
-       console.log("son par");
-       console.log(selectedItems);
-      
-       
+    if (el.classList.contains('active')) {
+      return
     }
-      else if (selectedItems.length === 2 && selectedItems[0] !== selectedItems[1]){ 
-      let selectedElement = event.currentTarget
-      selectedElement.classList.toggle('active');
-      console.log('no son par');  
-      console.log(selectedItems);
-      selectedItems = []
+
+    flippedElements.push(el)
+    el.classList.toggle('active')
+
+    if (flippedElements.length === 2) {
+      if (flippedElements[0].dataset.id === flippedElements[1].dataset.id) {
+        flippedElements[0].classList.add('Card--disabled')
+        flippedElements[1].classList.add('Card--disabled')
+        flippedElements = []
+        matches++
+        if (matches === data.items) {
+          alert('Ganaste!! 🎉  ')
+        }
+      } else {
+        setTimeout(() => {
+          flippedElements[0].classList.toggle('active')
+          flippedElements[1].classList.toggle('active')
+          flippedElements = []
+        }, 2000);
       }
-     
-      }
-    
-       
-    dataDuplicada.forEach((unPokemon, index)=> divBoard.appendChild(card(unPokemon, flipCard,checkForMatch, index)));
-    console.log(dataDuplicada);
- 
-  
-    return divBoard;
+    }
+  }
+
+  // function checkForMatch(event) {
+  //   if (flippedCards[0] === flippedCards[1]) {
+  //     console.log("son par");
+  //     console.log(flippedCards);
+  //   } else if (
+  //     flippedCards.length === 2 &&
+  //     flippedCards[0] !== flippedCards[1]
+  //   ) {
+  //     let selectedElement = event.currentTarget;
+  //     selectedElement.classList.toggle("active");
+  //     console.log("no son par");
+  //     console.log(flippedCards);
+  //     flippedCards = [];
+  //   }
+  // }
+
+  dataDuplicada.forEach((card) => divBoard.appendChild(Card(card, flipCard)));
+
+  return divBoard;
 };
 
-
-
-  export default Board;
-
+export default Board;
