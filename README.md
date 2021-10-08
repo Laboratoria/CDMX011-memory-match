@@ -370,3 +370,16 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 * [ ] UI: Permite al usuario _destapar_ las cartas de 2 en 2.
 * [ ] UI: Deja destapadas las cartas que coincidan al destaparlas.
 * [ ] UI: Indica al usuario que ganó cuando sea relevante.
+
+---
+
+## Reglas del juego
+
+* Si una tarjeta fue girada entonces no puede volver a ser girada a su
+  posición inicial hasta que una segunda tarjeta sea volteada. ✅
+* Si dos tarjetas hacen match al girarlas entonces deben permanecer volteadas
+  siempre. ✅
+* Si dos tarjetas volteadas no hacen match deben volver a ser giradas de regreso
+  al mismo tiempo. ✅
+* Solo dos tarjetas pueden estar giradas al mismo tiempo. ✅
+* El juego termina si todas las tarjetas disponibles han sido volteadas. ✅
