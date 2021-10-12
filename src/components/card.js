@@ -1,7 +1,9 @@
 const card = (eachCard, flipCard) => {
     const cardelement = document.createElement('div');
     cardelement.className = 'card';
+    cardelement.dataset.id = eachCard.id;
     cardelement.addEventListener('click', flipCard)
+
 
     const frontcard = document.createElement('div');
     frontcard.className = 'frontcard';
@@ -10,7 +12,7 @@ const card = (eachCard, flipCard) => {
     backcard.className = 'backcard';
 
     const frontp = document.createElement('p');
-    frontp.textContent = 'hey! guess the dev';
+    frontp.textContent = 'cdfef';
 
     const backp = document.createElement('p');
     backp.textContent = eachCard.id
