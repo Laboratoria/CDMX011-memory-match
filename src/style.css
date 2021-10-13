@@ -1,12 +1,12 @@
-/* 
+
 body {
-    /* background-color: rgb(63, 89, 99);
-    background-image: url('/imagenes/elmonitor.jpeg');
+    background-color: rgb(63, 89, 99);
+    /* background-image: url('/imagenes/elmonitor.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: auto;
-} */
+    height: auto;  */
+} 
 .App {
     text-align: center;
     justify-content: center;
@@ -18,11 +18,11 @@ body {
     height: 86px;
     font-size: 75px;
     font-family:Arial, Helvetica, sans-serif;
-    /* color:rgba(228, 228, 228, 1); */
-    color:black;
+    color:rgba(228, 228, 228, 1); 
+    /* color:black; */
     font-weight: bold;
     /* margin-top: 9px; */
-    padding: 15px;
+    padding: 10px;
     text-align: center;
 }
 .greeting {
@@ -44,8 +44,8 @@ body {
     background: rgb(194, 192, 192);
     width: 650px;
     height: 40px;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
+    border-top-right-radius: 11px;
+    border-top-left-radius: 11px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
     margin:auto;
@@ -54,16 +54,16 @@ body {
 }
 .img1 {
     display: flex;
-    width: 17px;
-    height: 17px;
+    width: 13px;
+    height: 13px;
 }
 .img2 {
-    width: 17px;
-    height: 17px;
+    width: 13px;
+    height: 13px;
 }
 .img3 {
-    width: 17px;
-    height: 17px;
+    width: 13px;
+    height: 13px;
 }
 .board {
     display:-webkit-flex;
@@ -75,19 +75,19 @@ body {
     align-items: center;
     margin:auto;
     background: rgba(228, 228, 228, 1);
-    height: 600px;
+    height: 610px;
     width: 650px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
 }
 .card {
     display:flex;
     margin: 5px;
     padding: 15px;
     /* position: relative; */
-    background-color: rgb(155, 153, 153);
+    background-color: rgb(167, 166, 166);
     border: 1px solid rgb(136, 136, 136);
     width: 98px;
     height: 98px;

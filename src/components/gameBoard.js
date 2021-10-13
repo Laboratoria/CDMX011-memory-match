@@ -26,8 +26,7 @@ const gameBoard = () => {
                 matches++ 
             if(matches == data.items.length) {
                     alert('you won, congrats!')
-                }
-                                     
+                }                 
             } else { 
                 setTimeout(() => {
                     elementsSelected[0].classList.toggle('frontcard');

@@ -11,7 +11,7 @@ const card = (eachCard, flipCard) => {
     backcard.className = 'backcard';
 
     const frontimage = document.createElement('img');
-    frontimage.src = './imagenes/question-mark.png';
+    // frontimage.src = './imagenes/question-mark.png';
     frontimage.className = 'frontImg';
 
     const backp = document.createElement('p');
