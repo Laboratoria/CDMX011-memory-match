@@ -13,15 +13,14 @@ const card = (eachCard, flipCard) => {
     const frontimage = document.createElement('img');
     frontimage.src = './imagenes/question-mark.png';
     frontimage.className = 'frontImg';
-    
 
     const backp = document.createElement('p');
     backp.textContent = eachCard.id
 
     const img = document.createElement('img');
     img.src = eachCard.image
-    img.height = 60;
-    img.width = 50;
+    img.height = 58;
+    img.width = 58;
 
     frontcard.appendChild(frontimage);
     backcard.append(img, backp);

@@ -1,11 +1,15 @@
-
+/* 
 body {
-    /* background-color: rgb(63, 89, 99);  */
+    /* background-color: rgb(63, 89, 99);
     background-image: url('/imagenes/elmonitor.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: auto;
+} */
+.App {
+    text-align: center;
+    justify-content: center;
 }
 .header {
     display: flex;
@@ -18,7 +22,7 @@ body {
     color:black;
     font-weight: bold;
     /* margin-top: 9px; */
-    padding: 30px;
+    padding: 15px;
     text-align: center;
 }
 .greeting {
@@ -38,7 +42,7 @@ body {
     display:-webkit-flex;
     display:-ms-flexbox;
     background: rgb(194, 192, 192);
-    width: 988px;
+    width: 650px;
     height: 40px;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
@@ -71,8 +75,8 @@ body {
     align-items: center;
     margin:auto;
     background: rgba(228, 228, 228, 1);
-    height: 533px;
-    width: 988px;
+    height: 600px;
+    width: 650px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 3px;
@@ -86,7 +90,7 @@ body {
     background-color: rgb(155, 153, 153);
     border: 1px solid rgb(136, 136, 136);
     width: 98px;
-    height: 96px;
+    height: 98px;
     border-radius: 5px;
     transform-style: preserve-3d;
     word-wrap: break-word;
@@ -97,13 +101,16 @@ body {
     font-family:Arial, Helvetica, sans-serif;
     text-align: justify;
 }
+.card-disabled {
+    pointer-events: none;
+}
 .frontImg {
-    height: 115px;
-    width: 108px;
+    height: 96px;
+    width: 98px;
     justify-content: center;
 }
 .frontcard {
-    position:absolute;
+    /* display: flex; */
     justify-items: center;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -114,21 +121,20 @@ body {
     color:black;
 }
 .backcard {
+    display:flex;
     background-color: rgb(146, 145, 145);
-    width: 108px;
-    height: 115px;
+    /* width: 98px;
+    height: 98px; */
     border-radius: 5px;
     font-weight: bold;
-    font-size: 28px;
     color: black;
-    text-align: center;
+    align-content: center;
+    justify-content: center;
+    /* text-align: center; */
     transform: rotateY(180deg);
     word-wrap: break-word;
     backface-visibility: hidden;
-    border: solid;
-}
-.card-disabled {
-    pointer-events: none;
+    /* border: solid; */
 }
 .buttonShuffler {
     display: flex;
