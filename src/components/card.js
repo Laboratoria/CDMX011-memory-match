@@ -4,15 +4,16 @@ const card = (eachCard, flipCard) => {
     cardelement.dataset.id = eachCard.id;
     cardelement.addEventListener('click', flipCard)
 
-
     const frontcard = document.createElement('div');
     frontcard.className = 'frontcard';
 
     const backcard = document.createElement('div');
     backcard.className = 'backcard';
 
-    const frontp = document.createElement('p');
-    frontp.textContent = 'cdfef';
+    const frontimage = document.createElement('img');
+    frontimage.src = './imagenes/question-mark.png';
+    frontimage.className = 'frontImg';
+    
 
     const backp = document.createElement('p');
     backp.textContent = eachCard.id
@@ -22,7 +23,7 @@ const card = (eachCard, flipCard) => {
     img.height = 60;
     img.width = 50;
 
-    frontcard.appendChild(frontp);
+    frontcard.appendChild(frontimage);
     backcard.append(img, backp);
 
     cardelement.append(frontcard, backcard)
